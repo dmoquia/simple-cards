@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Fraunces", serif;
+  font-size: 14px;
+  background: var(--cream);
+}
+:root {
+  /* primary */
+  --darkCyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  /* neutral */
+  --veryDarkBlue: hsl(212, 21%, 14%);
+  --darkGrayishBlue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+
+p {
+  color: var(--darkGrayishBlue);
+}
+.container {
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  border: 1px solid black;
+}
+.img-container {
+  display: none;
+}
+.img-container,
+.text-layout {
+  height: 400px;
+  width: 350px;
+  background: var(--white);
+}
+.mobile-img,
+.text-layout {
+  display: flex;
+  width: 440px;
+}
+.mobile-img {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  overflow: hidden;
+}
+.text-layout {
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+img {
+  width: 100%;
+}
+.text-layout {
+  padding: 0 2rem;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.text-layout h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+s {
+  margin: 1rem;
+}
+/* button */
+.text-layout a {
+  text-decoration: none;
+  background: var(--darkCyan);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  color: var(--white);
+}
+.text-layout p:first-child {
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+}
+.text-layout .text {
+  font-family: "Montserrat";
+  line-height: 1.5rem;
+  font-weight: 700;
+}
+.text-layout .price span {
+  color: var(--darkCyan);
+  font-size: 2rem;
+}
+.text-layout span img {
+  width: 15px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-img {
+    display: none;
+  }
+  .img-container,
+  .text-layout {
+    display: flex;
+    height: 529px;
+    width: 350px;
+    justify-content: space-evenly;
+  }
+  .img-container {
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    overflow: hidden;
+  }
+  .text-layout {
+    border-bottom-right-radius: 1rem;
+    border-top-right-radius: 1rem;
+  }
+}
